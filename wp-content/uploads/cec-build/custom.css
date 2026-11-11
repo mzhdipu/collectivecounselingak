@@ -1,0 +1,56 @@
+/* ===== Collective Effervescence Counseling: site-wide polish ===== */
+::selection { background: #93AB85; color: #1F3325; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, .elementor-button:focus-visible { outline: 3px solid #93AB85; outline-offset: 3px; }
+
+/* Sticky header (UAE header template) */
+#masthead { position: sticky; top: 0; z-index: 999; }
+.admin-bar #masthead { top: 32px; }
+@media (max-width: 782px) { .admin-bar #masthead { top: 0; } }
+
+/* UAE navigation: CTA last item + mobile dropdown */
+.hfe-nav-menu .menu-item a.hfe-menu-item { font-family: "Montserrat", sans-serif; }
+.hfe-nav-menu__layout-horizontal .hfe-nav-menu > li.menu-item:last-child { margin-left: 10px; }
+.hfe-nav-menu nav.hfe-dropdown { box-shadow: 0 18px 40px -16px rgba(31,51,37,.35); border-radius: 0 0 16px 16px; overflow: hidden; }
+
+/* Text links inside content */
+.elementor-widget-text-editor a { text-decoration: underline; text-underline-offset: 3px; }
+.elementor-widget-text-editor p:last-child { margin-bottom: 0; }
+
+/* FAQ (Elementor nested accordion) */
+.e-n-accordion-item { border-bottom: 1px solid rgba(46,74,51,.14); }
+.e-n-accordion-item-title { padding: 22px 4px !important; border: 0 !important; background: transparent !important; }
+.e-n-accordion-item-title-text { font-family: "Libre Caslon Text", serif; font-size: 20px; color: #2E4A33; line-height: 1.35; }
+.e-n-accordion-item-title-icon { color: #4F7A4E; }
+.e-n-accordion-item > [role="region"] { padding: 0 4px 24px !important; border: 0 !important; }
+@media (max-width: 767px) { .e-n-accordion-item-title-text { font-size: 18px; } }
+
+/* Contact Form 7 */
+.cec-form { display: flex; flex-direction: column; gap: 18px; }
+.cec-form p { margin: 0; }
+.cec-form br { display: none; }
+.cec-form .cec-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+@media (max-width: 767px) { .cec-form .cec-row { grid-template-columns: 1fr; } }
+.cec-form label { display: block; font-family: "Montserrat", sans-serif; font-size: 14px; font-weight: 600; color: #2E4A33; }
+.cec-form .req { color: #4F7A4E; }
+.cec-form .wpcf7-form-control-wrap { display: block; margin-top: 8px; }
+.cec-form input[type="text"], .cec-form input[type="email"], .cec-form input[type="tel"], .cec-form select, .cec-form textarea {
+	width: 100%; font-family: "Montserrat", sans-serif; font-size: 15px; font-weight: 400; color: #2F3B32;
+	background: #FAF7EE; border: 1px solid rgba(46,74,51,.22); border-radius: 10px; padding: 14px 16px; transition: border-color .2s, box-shadow .2s, background .2s; }
+.cec-form textarea { min-height: 140px; resize: vertical; }
+.cec-form ::placeholder { color: #7A877C; opacity: 1; }
+.cec-form input:focus, .cec-form select:focus, .cec-form textarea:focus { outline: none; border-color: #4F7A4E; background: #fff; box-shadow: 0 0 0 4px rgba(147,171,133,.35); }
+.cec-consent { font-family: "Montserrat", sans-serif; font-size: 13.5px; line-height: 1.6; color: #5F6E62; }
+.cec-consent .wpcf7-list-item { margin: 0; }
+.cec-consent label { font-weight: 400; color: #5F6E62; display: flex; gap: 10px; align-items: flex-start; }
+.cec-consent input[type="checkbox"] { margin-top: 4px; accent-color: #2E4A33; width: 16px; height: 16px; flex: 0 0 auto; }
+.cec-submit input[type="submit"], .cec-submit .wpcf7-submit {
+	width: 100%; font-family: "Montserrat", sans-serif; font-weight: 600; font-size: 15px; letter-spacing: .3px;
+	color: #fff; background: #2E4A33; border: 0; border-radius: 999px; padding: 17px 30px; cursor: pointer; transition: background .2s, transform .2s; }
+.cec-submit .wpcf7-submit:hover { background: #4F7A4E; }
+.cec-submit .wpcf7-submit:active { transform: translateY(1px); }
+.wpcf7 form .wpcf7-response-output { margin: 18px 0 0; padding: 14px 18px; border-radius: 10px; font-family: "Montserrat", sans-serif; font-size: 14px; }
+.wpcf7 form.sent .wpcf7-response-output { border-color: #4F7A4E; background: #E6EDDF; color: #1F3325; }
+.wpcf7-not-valid-tip { font-size: 13px; margin-top: 6px; }
+.wpcf7-spinner { display: block; margin: 12px auto 0; }
